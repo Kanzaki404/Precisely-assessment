@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { useTranslation } from 'react-i18next';
 import SearchBar from '../components/SearchBar';
-import { PageWrapper, PageContent, Heading, DetailsPanel} from './sharedStyles/SharedStyles'
+import { PageWrapper, PageContent, Heading, DetailsPanel, ContentArea} from './sharedStyles/SharedStyles'
 
 
 
@@ -15,9 +15,9 @@ function Customers() {
             <h1>{t('route_customers')}</h1>
             <SearchBar/>
           </Heading>
-        <div>
+        <ContentArea gridView={false}>
           Content
-        </div>
+        </ContentArea>
       </PageContent>
       <DetailsPanel>Detail Panel ...</DetailsPanel>
       </PageWrapper>
