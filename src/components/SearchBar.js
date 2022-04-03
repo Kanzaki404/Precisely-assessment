@@ -10,6 +10,8 @@ const SearchBarWrapper = styled.div`
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    box-shadow: 0px 4px 4px 0px #00000040;
+
 
 `
 const SearchIcon = styled.div`
