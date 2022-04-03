@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { useTranslation } from 'react-i18next';
 import SearchBar from '../components/SearchBar';
 import { PageWrapper, PageContent, Heading, DetailsPanel, ContentArea} from './sharedStyles/SharedStyles'
-
+import ListViewItem from '../components/Customer/ListViewItem';
 
 
 
@@ -16,7 +16,14 @@ function Customers() {
             <SearchBar/>
           </Heading>
         <ContentArea gridView={false}>
-          Content
+          <ListViewItem customer="Lawyers 2" nr={10}/>
+          <ListViewItem customer="Laywers Ltd" nr={10}/>
+          <ListViewItem customer="Laywers Ltd" nr={10}/>
+          <ListViewItem customer="Laywers Ltd" nr={10}/>
+          <ListViewItem customer="Laywers Ltd" nr={10}/>
+          <ListViewItem customer="Laywers Ltd" nr={10}/>
+          <ListViewItem customer="Laywers Ltd" nr={10}/>
+
         </ContentArea>
       </PageContent>
       <DetailsPanel>Detail Panel ...</DetailsPanel>
