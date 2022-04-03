@@ -54,8 +54,8 @@ function Options() {
       <LanguageOptions>
         <span>{t('language')}:</span>
         <LangChoice >
-          <Lang currentLang={i18n.language === 'en'}><span onClick={()=> i18n.changeLanguage('en')}>{t('en')}</span></Lang>
-          <Lang currentLang={i18n.language === 'sv'}><span onClick={()=> i18n.changeLanguage('sv')}>{t('sv')}</span></Lang>
+          <Lang currentLang={i18n.language === 'en'} onClick={()=> i18n.changeLanguage('en')}><span >{t('en')}</span></Lang>
+          <Lang currentLang={i18n.language === 'sv'} onClick={()=> i18n.changeLanguage('sv')}><span >{t('sv')}</span></Lang>
         
         </LangChoice>
       </LanguageOptions>
