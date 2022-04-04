@@ -6,6 +6,10 @@ import "./index.css";
 import './lang/i18n'
 import store from './store/store'
 import { Provider } from "react-redux";
+import { fetchCustomers, fetchContracts} from './store/actions/'
+
+store.dispatch(fetchCustomers())
+store.dispatch(fetchContracts())
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

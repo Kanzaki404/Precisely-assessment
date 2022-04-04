@@ -5,22 +5,23 @@ import { PageWrapper, PageContent, Heading, DetailsPanel, ContentArea} from './s
 import ListViewItem from '../components/Customer/ListViewItem';
 import GridViewItem from '../components/Customer/GridViewItem';
 import ContractDetail from '../components/ContractDetail';
+import { useSelector , useDispatch} from 'react-redux'
 
 function Customers() { 
    const {t} = useTranslation();
-   const GridViewTemplate = false;
+   const viewType = useSelector(state => state.viewType)
+    const customer = useSelector(state => state.customer)
 
-   const testArr = [1,2,3]
 
-   const ListView = testArr.map(e => {
+   const ListView = customer.map(e => {
      return (
-      <ListViewItem customer={`Lawyers ${e}`}  nr={10}/>
+      <ListViewItem customer={e.name}  nr={10}/>
      )
    })
 
-   const GridView = testArr.map(e => {
+   const GridView = customer.map(e => {
     return (
-     <GridViewItem customer={`Lawyers ${e}`} nr={10}/>
+     <GridViewItem customer={e.name}  nr={10}/>
     )
   })
     return (
@@ -30,8 +31,8 @@ function Customers() {
             <h1>{t('route_customers')}</h1>
             <SearchBar/>
           </Heading>
-        <ContentArea gridView={GridViewTemplate}>
-          {GridViewTemplate ?  GridView : ListView}
+        <ContentArea gridView={viewType.state === 'grid'}>
+          {viewType.state === 'grid' ?  GridView : ListView}
 
         
 

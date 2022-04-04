@@ -12,6 +12,7 @@ const ListviewItemWrapper = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    cursor: pointer;
 `
 const ListContent = styled.div`
     display: flex;

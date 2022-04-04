@@ -1,6 +1,35 @@
 import styled from '@emotion/styled'
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BsGrid, BsList } from 'react-icons/bs';
+import { useSelector , useDispatch} from 'react-redux'
+import {setGridView,setListView} from '../store/actions/'
+
+
+
+function SearchBar() {
+    const viewType = useSelector(state => state.viewType)
+    const dispatch = useDispatch()
+    
+    return (
+        <SearchBarWrapper>
+            <SearchIcon>
+                <AiOutlineSearch />
+            </SearchIcon>
+            <SearchBarInput>
+
+            </SearchBarInput>
+            <ViewOptionGroup>
+                <ViewButton onClick={()=> dispatch(setGridView('grid'))} viewType={viewType.state === 'grid'}><BsGrid/></ViewButton>
+                <ViewButton onClick={()=> dispatch(setListView('list'))} viewType={viewType.state  === 'list'}><BsList/></ViewButton>
+            </ViewOptionGroup>
+
+
+        </SearchBarWrapper>
+    );
+}
+
+export default SearchBar;
+
 const SearchBarWrapper = styled.div`
     height: 50px;
     width: 370px;
@@ -42,8 +71,8 @@ const ViewOptionGroup = styled.div`
    
 `
 const ViewButton = styled.button`
-/* background-color: rgba(196,196,196,0.54); */
-    background-color: transparent; 
+
+    background-color: ${props => props.viewType ? 'rgba(196,196,196,0.54)' : 'transparent'}; 
     color: white;
     border: none;
     height: 40px;
@@ -53,30 +82,9 @@ const ViewButton = styled.button`
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    margin-left: 5px;
     cursor: pointer;
     &:hover{
         background-color: rgba(196,196,196,0.54);
     }
 `
-
-function SearchBar() {
-
-    return (
-        <SearchBarWrapper>
-            <SearchIcon>
-                <AiOutlineSearch />
-            </SearchIcon>
-            <SearchBarInput>
-
-            </SearchBarInput>
-            <ViewOptionGroup>
-                <ViewButton onClick={()=> console.log('grid view')}><BsGrid/></ViewButton>
-                <ViewButton onClick={()=> console.log('List view')}><BsList/></ViewButton>
-            </ViewOptionGroup>
-
-
-        </SearchBarWrapper>
-    );
-}
-
-export default SearchBar;
