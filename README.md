@@ -1,4 +1,4 @@
-# Precisely Assesment
+# Precisely Assessment
 ## Used Tech Stack
 - React v18
 - Redux
