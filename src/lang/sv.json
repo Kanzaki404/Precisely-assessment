@@ -9,5 +9,8 @@
     "en": "English",
     "nr_contracts": "Totala kontrakter:",
     "show_details": "Visa Detaljer",
-    "delete": "Ta bort"
+    "delete": "Ta bort",
+    "delete_customer": "Ta bort Kund",
+    "related_contracts": "Relaterad Kontrakter",
+    "customer": "Kund"
 }

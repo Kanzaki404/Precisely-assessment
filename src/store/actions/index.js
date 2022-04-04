@@ -47,3 +47,34 @@ export const setListView = (payload) => {
         payload
     }
 }
+
+export const currentContract = (payload) => {
+    return {
+        type: 'CURRENT_CONTRACT',
+        payload
+    }
+}
+
+export const currentCustomer = (payload) => {
+    console.log('gere')
+    return {
+        type: 'CURRENT_CUSTOMER',
+        payload
+    }
+}
+
+export const removeCustomer = (customerId) => {
+    return {
+        type: 'REMOVE_CUSTOMER',
+        payload: {customerId}
+    }
+
+}
+
+export const removeCustomerRelatedContracts = (customerId) => {
+    return {
+        type: 'REMOVE_CUSTOMER_RELATED_CONTRACTS',
+        payload: {customerId}
+    }
+
+}

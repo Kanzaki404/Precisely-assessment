@@ -1,5 +1,5 @@
 import styled from '@emotion/styled' 
-import { BsArrowRightShort } from 'react-icons/bs';
+
 const ListviewItemWrapper = styled.div`
     height: 60px;
     width: 95%;
@@ -34,16 +34,9 @@ const SelectedIndicator = styled.div`
     right: 0;
     top: 0;
 `
-function ListViewItem({ContractTitle}){
-     return (
-         <ListviewItemWrapper>
-             <ListContent>
-                 <h3>{ContractTitle}</h3>
-                 <BsArrowRightShort size={40}/>
-             </ListContent>
-             <SelectedIndicator selected={ContractTitle === 'Contract 2'}></SelectedIndicator>
-         </ListviewItemWrapper>
-     )
- }
 
- export default ListViewItem;
+export  {
+    ListviewItemWrapper,
+    ListContent,
+    SelectedIndicator
+}

@@ -1,7 +1,4 @@
 import styled from '@emotion/styled'
-import { useTranslation } from 'react-i18next';
-import { BiBuildings } from 'react-icons/bi';
-import { BsArrowRightShort } from 'react-icons/bs';
 
 const ListViewItemWrapper = styled.div`
     height: 100px;
@@ -11,14 +8,14 @@ const ListViewItemWrapper = styled.div`
     border-radius: 5px;
     position: relative;
     margin-bottom: 20px;
+    cursor: pointer;
 `
 const ListViewContent = styled.div`
-    
     height: 100%;
     width: 95%;
     display: flex;
     align-items: center;
-   
+
 `
 
 const ListViewIcon = styled.div`
@@ -44,7 +41,6 @@ const ListViewInfo = styled.div`
 
 const ListViewArror = styled.div`
     margin-left: auto;
-
 `
 const SelectedIndicator = styled.div`
     position: absolute;
@@ -55,23 +51,12 @@ const SelectedIndicator = styled.div`
     right: 0;
     top: 0;
 `
-function ListViewItem({ customer, nr }) {
-    const {t} = useTranslation();
-    return (
-        <ListViewItemWrapper>
-            <ListViewContent>
-                <ListViewIcon>
-                    <BiBuildings />
-                </ListViewIcon>
-                <ListViewInfo>{customer}</ListViewInfo>
-                <ListViewInfo>{t('nr_contracts')} {nr}</ListViewInfo>
-                <ListViewArror>
-                    <BsArrowRightShort size={40} />
-                </ListViewArror>
-            </ListViewContent>
-            <SelectedIndicator selected={customer === 'Lawyers 2'} />
-        </ListViewItemWrapper>
-    )
-}
 
-export default ListViewItem
+export {
+    ListViewItemWrapper,
+    ListViewInfo,
+    ListViewIcon,
+    ListViewContent,
+    ListViewArror,
+    SelectedIndicator
+}
