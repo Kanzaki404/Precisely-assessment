@@ -6,5 +6,8 @@
     "route_options": "Settings",
     "language": "Language",
     "sv": "Svenska",
-    "en": "English"
+    "en": "English",
+    "nr_contracts": "Nr. of Contracts:",
+    "show_details": "Show Details",
+    "delete": "Delete"
 }

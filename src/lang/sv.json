@@ -6,5 +6,8 @@
     "route_options": "Inställningar",
     "language": "Språk",
     "sv": "Svenska",
-    "en": "English"
+    "en": "English",
+    "nr_contracts": "Totala kontrakter:",
+    "show_details": "Visa Detaljer",
+    "delete": "Ta bort"
 }

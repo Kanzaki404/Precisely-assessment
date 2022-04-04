@@ -13,7 +13,7 @@ const ButtonWrapper = styled.button`
     color: ${props => props.type !== 'primary' && props.type === 'warning'  ?  '#F25050' : '#254CD8' };
     font-size: 14px;
     font-weight: bold;
-
+  cursor: pointer;
     &:hover{
         background-color: ${props => props.type !== 'primary' && props.type === 'warning'  ?  '#F25050' : '#254CD8' };
         color: white;

@@ -27,7 +27,7 @@ export const Heading = styled.div`
 
 
 export const DetailsPanel = styled.div`
-    width: 450px;
+    width: 400px;
     height: 100vh;
     float: right;
     background-color: #FFF;
@@ -38,7 +38,7 @@ export const DetailsPanel = styled.div`
 export const ContentArea = styled.div`
 ${props => props.gridView ? 
     `display: grid;
-    grid-template-columns: auto auto auto auto;?`
+    grid-template-columns: auto auto auto;?`
     : null
 }
    
@@ -62,4 +62,13 @@ ${props => props.gridView ?
         background: #4F4F4F;
         border-radius: 5px;
     }
+`
+
+export const SelectedIndicator = styled.div`
+    position: absolute;
+    bottom: 0;
+    background-color: ${props => props.selected  ?  '#4BE488' : '#CCC' };
+    border-radius: 0px 0px 5px 5px;
+    width: 100%;
+    height: 10px;
 `

@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next';
+import { SelectedIndicator } from '../../Pages/sharedStyles/SharedStyles'
+
 import styled from '@emotion/styled'
 
 const GridViewItemWrapper = styled.div`
@@ -14,14 +16,6 @@ const GridViewItemWrapper = styled.div`
     position: relative;
 `
 
-const SelectedIndicator = styled.div`
-    position: absolute;
-    bottom: 0;
-    background-color: ${props => props.selected  ?  '#4BE488' : '#CCC' };
-    border-radius: 0px 0px 5px 5px;
-    width: 100%;
-    height: 10px;
-`
 
 function GridViewItem({ContractTitle}) { 
     

@@ -6,7 +6,7 @@ import routes from '../routes'
 const NavWrapper = styled.div`
   background-color: white;
   height: 100vh;
-  width: 220px;
+  max-width: 200px;
   padding: 20px;
   box-sizing: border-box;
 `
@@ -15,9 +15,10 @@ const NavItem = styled.li`
     margin-bottom: 10px;
     list-style: none;
     border-radius: 5px;
+  
     background-color: ${props => props.location  ?  '#254CD8' : 'transparent' };
     color: white;
-    font-size: 20px;
+    font-size: 15px;
    
     .LinkItem{
         color: ${props => props.location  ?  '#FFF' : '#000' };
@@ -33,8 +34,8 @@ const NavItem = styled.li`
     }
 `
 const NavIcon = styled.div`
-    font-size: 25px;
-    margin-right: 15px;
+    font-size: 20px;
+    margin-right: 10px;
 `
 
 function SideBar() {

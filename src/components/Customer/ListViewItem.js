@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { useTranslation } from 'react-i18next';
 import { BiBuildings } from 'react-icons/bi';
 import { BsArrowRightShort } from 'react-icons/bs';
 
@@ -37,7 +38,7 @@ const ListViewInfo = styled.div`
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 20px;
-    width: 150px;
+    width: 170px;
     box-sizing: border-box;
 `
 
@@ -55,6 +56,7 @@ const SelectedIndicator = styled.div`
     top: 0;
 `
 function ListViewItem({ customer, nr }) {
+    const {t} = useTranslation();
     return (
         <ListViewItemWrapper>
             <ListViewContent>
@@ -62,7 +64,7 @@ function ListViewItem({ customer, nr }) {
                     <BiBuildings />
                 </ListViewIcon>
                 <ListViewInfo>{customer}</ListViewInfo>
-                <ListViewInfo>Nr. Contracts: {nr}</ListViewInfo>
+                <ListViewInfo>{t('nr_contracts')} {nr}</ListViewInfo>
                 <ListViewArror>
                     <BsArrowRightShort size={40} />
                 </ListViewArror>

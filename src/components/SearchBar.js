@@ -70,8 +70,8 @@ function SearchBar() {
 
             </SearchBarInput>
             <ViewOptionGroup>
-                <ViewButton ><BsGrid/></ViewButton>
-                <ViewButton><BsList/></ViewButton>
+                <ViewButton onClick={()=> console.log('grid view')}><BsGrid/></ViewButton>
+                <ViewButton onClick={()=> console.log('List view')}><BsList/></ViewButton>
             </ViewOptionGroup>
 
 
