@@ -1,12 +1,10 @@
-
 import { Link, useLocation } from "react-router-dom";
 import routes from '../../routes'
 import * as st from './SideBar.style'
 
-
 function SideBar() {
     const { pathname } = useLocation()
-    
+
     const navItems = routes.data.map(e => {
         return (
             <st.NavItem key={e.path} location={pathname === e.path}>

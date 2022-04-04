@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import Button from '../Button/Button'
@@ -13,7 +12,7 @@ function ContractDetail({
     deleteCustomer,
     t
 }) {
-    const [ContractList, setContractList] = useState([])
+    const [contractList, setContractList] = useState([])
     useEffect(()=>{
         if(showList){
             const List = relatedContracts.map(e => {
@@ -38,11 +37,10 @@ function ContractDetail({
                             <span>{t('related_contracts')}</span>
                         </st.Heading>
                         <st.ContractListItemContainer>
-                            {ContractList}
+                            {contractList}
                         </st.ContractListItemContainer>
                         <hr/>
                         <Button action={deleteCustomer} options={{type: 'warning', size: 'full'}}>{t('delete_customer')}</Button>
-
                     </>
                     :
                     <>
@@ -59,10 +57,7 @@ function ContractDetail({
                             </p>
                         </st.Sections>
                     </>
-
             }
-
-
         </st.ContractDetailWrapper>
     )
 }

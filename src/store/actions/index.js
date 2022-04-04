@@ -56,7 +56,6 @@ export const currentContract = (payload) => {
 }
 
 export const currentCustomer = (payload) => {
-    console.log('gere')
     return {
         type: 'CURRENT_CUSTOMER',
         payload
